@@ -1,0 +1,8 @@
+enregistrement\avito\metier\Utilisateur.class
+enregistrement\avito\config\CorsInterceptor.class
+enregistrement\avito\controller\MessageController.class
+enregistrement\avito\dao\MessageDAOImpl.class
+enregistrement\avito\metier\Message.class
+enregistrement\avito\metier\UserMessage.class
+enregistrement\avito\dao\MessageDAO.class
+enregistrement\avito\restprovider\RestProvider.class

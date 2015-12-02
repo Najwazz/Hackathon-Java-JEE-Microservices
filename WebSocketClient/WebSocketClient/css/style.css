@@ -1,0 +1,207 @@
+/*
+blue 2a73b9
+green 70b352
+orange f08024
+*/
+textarea {
+    max-height: 200px;
+    max-width: 100%;
+    min-height: 100px;
+    min-width: 100%;
+}
+a,
+textarea,
+input,
+.btn {
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+input.form-control:focus {
+    border-color: #2a73b9;
+}
+
+body {
+    background: url(../image/body_bg.png);
+}
+
+.header-logo {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #2a73b9;
+}
+
+.header-logo img {
+    height: 100%;
+    width: auto;
+}
+.login-form {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-bottom: 2px solid #70b352;
+}
+
+.login-form .form-title {
+    color: #70b352;
+    margin: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    color: #2a73b9;
+}
+
+.login-form .btn-login {
+    color: #ffffff;
+    background-color: #70b352;
+    width: 100%;
+    border-bottom: 2px solid #287d3c;
+}
+
+.login-form .btn-login:hover,
+.login-form .btn-login:focus {
+    background-color: #287d3c;
+}
+/***************************************************************/
+.header-title {
+    margin: 0px;
+    padding: 20px 0px;
+    background: url(../image/ma_header_bg.png);
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.header-title h3 {
+    margin: 0px;
+}
+/**************************************************************/
+
+#ContainerDiv {
+    margin: auto;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    width:350px;
+}
+
+#ContainerDiv .panel .panel-heading {
+    background-color: #70b352;
+    color: #ffffff;
+}   
+    
+#ContainerDiv .panel .panel-body label {
+    color: #2a73b9;
+}
+
+#ContainerDiv .panel .btn-panel-contact {
+    color: #ffffff;
+    background-color: #70b352;
+    width: 60%;
+    border-bottom: 2px solid #287d3c;
+}
+#ContainerDiv .panel .btn-panel-contact:hover,
+#ContainerDiv .panel .btn-panel-contact:focus {
+    background-color: #287d3c;
+}
+
+
+#ContainerDiv .panel .btn-cencel {
+    color: #ffffff;
+    background-color: #bdc3c7;
+    width: 35%;
+    border-bottom: 2px solid #95a5a6;
+}
+
+#ContainerDiv .panel .btn-cencel:hover,
+#ContainerDiv .panel .btn-cencel:focus {
+    background-color: #95a5a6;
+}
+
+/*******************************************************************/
+#annonces-view .panel {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-color: #ecf0f1;
+}
+
+#annonces-view .panel .panel-heading {
+    background-color: #2a73b9;
+    color: #ffffff;
+}
+
+#annonces-view .panel .panel-body .annonce-content p {
+    text-align: justify;
+    padding-right: 10px;
+    color: #95a5a6;
+}
+
+#annonces-view .panel .panel-body h3.title {
+    color: #3498db;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+#annonces-view .panel .panel-body .info-user {
+    border-left: 1px solid #bdc3c7;
+}
+#annonces-view .panel .panel-body .info-user p.user-name {
+    color: #95a5a6;
+}
+#annonces-view .panel .panel-body .info-user .user-image {
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+}
+
+#annonces-view .panel .panel-body .info-user .btn-contact-user {
+    color: #ffffff;
+    background-color: #3498db;
+    width: 35%;
+    border-bottom: 2px solid #2a73b9;
+}
+
+#annonces-view .panel .panel-body .info-user .btn-contact-user:hover,
+#annonces-view .panel .panel-body .info-user .btn-contact-user:focus {
+    color: #ffffff;
+    background-color: #2a73b9;
+}
+
+#annonces-view .panel .panel-footer {
+    background-color: #ecf0f1;
+    text-align: right;
+    color: #2a73b9;
+}
+
+#annonces-view .panel .panel-footer span {
+    margin-right: 5px;
+}
+/**************************************************************/
+.navbar {
+    margin-bottom: 0px;
+}
+.navbar .navbar-brand img {
+    height: 100%;
+    width: auto;
+}
+
+.navbar-inverse {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-bottom: 2px solid #2a73b9;
+}
+
+.navbar .nav li a:hover,
+.navbar .nav li a:focus {
+    color: #2a73b9;
+}

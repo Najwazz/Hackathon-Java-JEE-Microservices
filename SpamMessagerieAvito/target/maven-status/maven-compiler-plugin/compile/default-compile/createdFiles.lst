@@ -1,0 +1,10 @@
+spam\avito\dao\KeywordDAOImpl.class
+spam\avito\dao\KeywordDAO.class
+spam\avito\metier\Bloquage.class
+spam\avito\config\CorsInterceptor.class
+spam\avito\dao\BloquageDAO.class
+spam\avito\controller\BloquageController.class
+spam\avito\dao\BloquageDAOImpl.class
+spam\avito\controller\BloquageController$ConfirmResponse.class
+spam\avito\metier\Keyword.class
+spam\avito\controller\KeywordController.class

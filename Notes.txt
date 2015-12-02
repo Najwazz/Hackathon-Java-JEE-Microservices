@@ -1,0 +1,3 @@
+Subject :
+
+We want the participants to build (2 or more Microservices) "Building one unique Microservice will not be challenging" thus we want more than one (and create connexions between the Microservices) - thus it's challenging - functionalities may need to be separated Participants should build an Instant Messaging (Microservice) to connect Logged Listers and Logged Buyers Overview of the workflow - historic will be stored and is linked to session Build client could be basic & whatever participants want to use, FE also (HTML, APPS, whatever they want) Participants could be teams (Maximum 3 persons)

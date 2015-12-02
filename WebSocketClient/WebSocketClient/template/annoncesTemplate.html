@@ -1,0 +1,60 @@
+<div class="header-title">
+        <div class="container"><h3>{{title}}</h3></div>
+    </div>
+    <div class="container" id="annonces-view">
+    
+    <div class="row" ng-repeat="annonce in annonces">
+
+       <div class="panel panel-info">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">{{annonce.titre}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-8">
+                    <div class="annonce-content"><p>{{annonce.body}}</p></div>
+                </div>
+
+                <div class="col-md-4 info-user">
+                    <h3 class="title">Détails sur le vendeur</h3>
+                    <p class="user-name">
+                        <img class="user-image" src="image/avatar.png">
+                        {{annonce.vendeur.nom+' '+annonce.vendeur.prenom}}
+                    </p>
+                    <button class="btn btn-contact-user" ng-click="contacter(annonce.vendeur)">Contacter</button>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <span class="glyphicon glyphicon-calendar"></span>
+                {{formater(annonce.dateAnnonce)}}
+            </div>
+       </div>
+
+    </div>
+    
+    <div id="ContainerDiv" ng-show="show_contact">
+        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contact</h3>
+                </div>
+                <div class="panel-body" >
+                    <div class="form-group">
+                        <label for="vendeur">Vendeur : </label>
+                        <input type="text" disabled="disabled" class="form-control" id="vendeur" value="{{contactVendeur.nom+' '+contactVendeur.prenom}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message : </label>
+                        <textarea class="form-control" id="message" rows="7" cols="20" ng-model="messageAEnvoyer"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-panel-contact" ng-click="envoyerMessage()">Envoyer</button>
+                        <button class="btn btn-cencel pull-right" ng-click="annulerMessage()">Annuler</button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+    </div>
+
+</div>

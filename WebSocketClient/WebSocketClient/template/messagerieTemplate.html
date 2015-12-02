@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-3">
+        <h3>Liste des contacts</h3>
+        <input type="text" ng-model="condition" /><br>
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-class="{'active' : userm.user.identifiant==selectedUser.user.identifiant}" ng-repeat="userm in user_messages | filter:condition" ng-click="selectUser(userm)"><a>
+            <i ng-class="{'text-success':(userm.status=='online'),'text-muted':(userm.status=='offline'),'text-danger':(userm.denied)}" class="fa fa-circle"></i> 
+            {{userm.user.nom+' '+userm.user.prenom}}<span ng-show="userm.new_messages==true" class="label label-success">New</span></a></li>
+        </ul>
+    </div>
+    <div class="col-md-9" ng-show="selectedUser.user">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span> Historiques des messages avec {{selectedUser.user.nom+' '+selectedUser.user.prenom}}
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <ul class="dropdown-menu slidedown">
+                    <li><a style="cursor:pointer;" ng-click="bloquer()"><span class="glyphicon glyphicon-ban-circle">
+                    </span>Bloquer</a></li>
+
+                </ul>
+            </div>
+            
+            </div>
+            <div class="panel-body" id="tchatbody">
+
+                <div class="clearfix" ng-repeat="msg in selectedUser.messages">
+                    <blockquote ng-class="{'you pull-left':connectedUser.identifiant!=msg.emetteur,'me pull-right':connectedUser.identifiant==msg.emetteur}" data-toggle="tooltip" data-placement="left" title="{{formater(msg.timestamp)}}"><span ng-if="connectedUser.identifiant!=msg.emetteur"><b>{{selectedUser.user.nom+' '+selectedUser.user.prenom+' : '}}</b></span>{{msg.contenu}}</blockquote>
+                </div>
+
+            </div>
+
+            <div class="panel-footer">
+               <form ng-submit="envoyer()">
+                <div class="input-group">
+                    
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Entrez votre message" ng-model="message" ng-disabled="selectedUser.denied"/>
+                        <span class="input-group-btn">
+                            <input type="submit" class="btn btn-warning btn-sm" id="btn-chat" ng-click="envoyer()" value="Envoyer"/>
+                        </span>
+                    
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

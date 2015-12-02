@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.min.js" ></script>
+    <script src="js/angular.min.js" ></script>
+    <script src="app.js" ></script>
+
+</head>
+
+<body ng-app="WSClient">
+       <a href="page2.html">Authentification</a>
+    <div ng-controller="MainController">
+        <h3>{{title}}</h3>
+
+        <ul>
+            <li ng-repeat="message in messages">{{message.texte}}</li>
+        </ul>
+        <!--Utilisateur : <input type="text" ng-model="emetteur"/> <button ng-click="seConnecter()">Se connecter</button><br>-->
+        <div ng-show="emetteur">
+            Recepteur : <input type="text" ng-model="recepteur"/><br>
+            <input type="text" ng-model="texte" /> <button ng-click="envoyer()">Envoyer</button>
+        </div>
+        <div ng-show="!emetteur">
+            <h3>Authentification</h3>
+            <!--<form method="post" action="http://localhost:8080/WSocketSample/authentification">-->
+                <table>
+                   {{authentification_error}}
+                    <tr>
+                        <td>Utilisateur : </td>
+                        <td><input type="text" name="user" ng-model="authentification.user"/></td>
+                    </tr>
+                    <tr>
+                        <td>Mot de passe : </td>
+                        <td><input type="password" name="password" ng-model="authentification.password"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button ng-click="authentifier()">Valider</button></td>
+                    </tr>
+                </table>
+            <!--</form>-->
+        </div>
+    </div>
+    <script>
+    
+    
+    </script>
+
+
+</body>
+
+</html>

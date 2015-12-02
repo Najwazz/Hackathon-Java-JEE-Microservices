@@ -1,0 +1,9 @@
+websocket\avito\server\HttpSessionConfigurator.class
+websocket\avito\metier\Bloquage.class
+websocket\avito\controller\AuthentificationController.class
+websocket\avito\server\EncoderDecoder.class
+websocket\avito\config\CorsInterceptor.class
+websocket\avito\metier\Utilisateur.class
+websocket\avito\metier\Message.class
+websocket\avito\restprovider\RestProvider.class
+websocket\avito\server\WServer.class
